@@ -1,6 +1,9 @@
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import getSpaces from "@/app/_lib/data-service";
+import SpaceDescriptionText from "@/app/_components/SpaceDescriptionText";
+
+export const revalidate = 0; // Clear Caching to get the latest data
+
 // import Link from "next/link";
 import { getSpace } from "@/app/_lib/data-service";
 export async function generateMetadata({ params }) {
@@ -33,7 +36,9 @@ export default async function Page({ params }) {
             Space {name}
           </h3>
 
-          <p className="text-lg text-primary-300 mb-10">{description}</p>
+          <p className="text-lg text-primary-300 mb-10">
+            <SpaceDescriptionText text={description} />
+          </p>
 
           <ul className="flex flex-col gap-4 mb-7">
             <li className="flex gap-3 items-center">
