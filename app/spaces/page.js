@@ -2,7 +2,7 @@
 import { Suspense } from "react";
 import SpaceList from "./spaceList";
 import "@/app/_styles/globals.css";
-
+import Filter from "../_components/Filter";
 // export const revalidate = 3600; // Clear Caching to get the latest data
 // export const revalidate = 0; // Clear Caching to get the latest data
 
@@ -11,7 +11,8 @@ export const metadata = {
 };
 // import Spinner from "../_components/Spinner";
 import Loading from "./loading";
-export default function Page() {
+export default function Page({ searchParams }) {
+  const filter = searchParams?.capacity ?? "all";
   // CHANGE
   return (
     <div>
@@ -26,8 +27,11 @@ export default function Page() {
         a peaceful home where you can truly unwind and feel at ease. Welcome to
         your personal retreat.
       </p>
+      <div className="flex justify-end mb-8">
+        <Filter />
+      </div>
       <Suspense fallback={<Loading />}>
-        <SpaceList />
+        <SpaceList filter={filter} />
       </Suspense>
     </div>
   );
