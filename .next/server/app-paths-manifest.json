@@ -1,5 +1,5 @@
 {
   "/spaces/page": "app/spaces/page.js",
   "/page": "app/page.js",
-  "/icon.png/route": "app/icon.png/route.js"
+  "/spaces/[spaceId]/page": "app/spaces/[spaceId]/page.js"
 }

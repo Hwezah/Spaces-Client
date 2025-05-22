@@ -11,6 +11,7 @@ export const metadata = {
 };
 // import Spinner from "../_components/Spinner";
 import Loading from "./loading";
+import ReservationReminder from "../_components/ReservationReminder";
 export default function Page({ searchParams }) {
   const filter = searchParams?.capacity ?? "all";
   // CHANGE
@@ -30,8 +31,9 @@ export default function Page({ searchParams }) {
       <div className="flex justify-end mb-8">
         <Filter />
       </div>
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading />} key={filter}>
         <SpaceList filter={filter} />
+        <ReservationReminder />
       </Suspense>
     </div>
   );

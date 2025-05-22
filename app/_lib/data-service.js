@@ -89,7 +89,7 @@ export async function getBookings(guestId) {
     )
     .eq("guestId", guestId)
     .order("startDate");
-
+  console.log(data);
   if (error) {
     console.error(error);
     throw new Error("Bookings could not get loaded");
@@ -108,11 +108,12 @@ export async function getBookedDatesByspaceId(spaceId) {
     .from("bookings")
     .select("*")
     .eq("spaceId", spaceId)
-    .or(`startDate.gte.${today},status.eq.checked-in`);
+    .or(`startDate.gte.${today},status.eq.checked-in`, { foreignTable: null });
+  // .or(`startDate.gte.${today},status.eq.checked-in`);
 
   if (error) {
     console.error(error);
-    throw new Error("Bookings could not get loaded");
+    throw new Error("Bookings could not be loaded");
   }
 
   // Converting to actual dates to be displayed in the date picker

@@ -36,10 +36,16 @@
       "static/chunks/main-app.js",
       "static/chunks/app/spaces/loading.js"
     ],
-    "/_not-found/page": [
+    "/spaces/[spaceId]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/css/app/spaces/[spaceId]/page.css",
+      "static/chunks/app/spaces/[spaceId]/page.js"
+    ],
+    "/spaces/[spaceId]/not-found": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/spaces/[spaceId]/not-found.js"
     ]
   }
 }
