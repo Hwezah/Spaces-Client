@@ -27,7 +27,7 @@ function DateSelector({ settings, space, bookedDates }) {
   const { maxBookingLength, minBookingLength } = settings;
 
   return (
-    <div className="flex flex-col justify-between">
+    <div className="flex flex-col justify-between w-half  border border-primary-800 min-h-[400px]">
       <DayPicker
         className="pt-12 place-self-center "
         mode="range"
