@@ -16,15 +16,17 @@ const navLinks = [
     href: "/account",
     icon: <HomeIcon className="h-5 w-5 text-primary-600" />,
   },
-  {
-    name: "Reservations",
-    href: "/account/reservations",
-    icon: <CalendarDaysIcon className="h-5 w-5 text-primary-600" />,
-  },
+
   {
     name: "Guest profile",
     href: "/account/profile",
     icon: <UserIcon className="h-5 w-5 text-primary-600" />,
+  },
+
+  {
+    name: "Reservations",
+    href: "/account/reservations",
+    icon: <CalendarDaysIcon className="h-5 w-5 text-primary-600" />,
   },
 ];
 
