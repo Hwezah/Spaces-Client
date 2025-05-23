@@ -94,7 +94,8 @@ eval(__webpack_require__.ts("__webpack_require__.r(__webpack_exports__);\n/* har
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   signInAction: function() { return /* binding */ signInAction; },
-/* harmony export */   signOutAction: function() { return /* binding */ signOutAction; }
+/* harmony export */   signOutAction: function() { return /* binding */ signOutAction; },
+/* harmony export */   updateGuestAction: function() { return /* binding */ updateGuestAction; }
 /* harmony export */ });
 /* harmony import */ var next_dist_client_app_call_server__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/dist/client/app-call-server */ "(app-pages-browser)/./node_modules/next/dist/client/app-call-server.js");
 /* harmony import */ var next_dist_client_app_call_server__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_dist_client_app_call_server__WEBPACK_IMPORTED_MODULE_0__);
@@ -106,9 +107,10 @@ function __build_action__(action, args) {
   return (0,next_dist_client_app_call_server__WEBPACK_IMPORTED_MODULE_0__.callServer)(action.$$id, args)
 }
 
-/* __next_internal_action_entry_do_not_use__ {"a7544e77d0cc57f80c882ee791a5831c24b854c8":"signOutAction","f56f93c3d1277561ff68cca17e5af3c968d286af":"signInAction"} */ var signOutAction = (0,private_next_rsc_action_client_wrapper__WEBPACK_IMPORTED_MODULE_1__.createServerReference)("a7544e77d0cc57f80c882ee791a5831c24b854c8");
+/* __next_internal_action_entry_do_not_use__ {"3c296258c67231332cb887370ed2c6d1c90adc18":"updateGuestAction","a7544e77d0cc57f80c882ee791a5831c24b854c8":"signOutAction","f56f93c3d1277561ff68cca17e5af3c968d286af":"signInAction"} */ var updateGuestAction = (0,private_next_rsc_action_client_wrapper__WEBPACK_IMPORTED_MODULE_1__.createServerReference)("3c296258c67231332cb887370ed2c6d1c90adc18");
 
 var signInAction = (0,private_next_rsc_action_client_wrapper__WEBPACK_IMPORTED_MODULE_1__.createServerReference)("f56f93c3d1277561ff68cca17e5af3c968d286af");
+var signOutAction = (0,private_next_rsc_action_client_wrapper__WEBPACK_IMPORTED_MODULE_1__.createServerReference)("a7544e77d0cc57f80c882ee791a5831c24b854c8");
 
 
 
