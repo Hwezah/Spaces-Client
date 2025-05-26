@@ -23,13 +23,13 @@ function ReservationCard({ booking }) {
   } = booking;
 
   return (
-    <div className="flex border border-primary-800">
+    <div className="flex  bg-primary-900">
       <div className="relative h-32 aspect-square">
         <Image
           src={image}
           fill
           alt={`space ${name}`}
-          className="object-cover border-r border-primary-800"
+          className="object-cover"
         />
       </div>
 

@@ -1,5 +1,6 @@
 "use client";
 import { useReservation } from "@/app/_components/ReservationContext";
+import Image from "next/image";
 function ReservationForm({ space, user }) {
   const { range, setRange, resetRange } = useReservation();
   // CHANGE
@@ -11,13 +12,16 @@ function ReservationForm({ space, user }) {
         <p>Logged in as</p>
 
         <div className="flex gap-4 items-center">
-          <img
-            // Important to display google profile images
-            referrerPolicy="no-referrer"
-            className="h-8 rounded-full"
-            src={user.image}
-            alt={user.name}
-          />
+          <div className="relative h-8 w-8">
+            <Image
+              // Important to display google profile images
+              referrerPolicy="no-referrer"
+              className=" rounded-full object-cover "
+              fill
+              src={user.image}
+              alt={user.name}
+            />
+          </div>
           <p>{user.name}</p>
         </div>
       </div>

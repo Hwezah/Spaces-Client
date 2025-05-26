@@ -20,7 +20,7 @@ export default function Page() {
           href="/spaces"
           className="bg-accent-500 px-8 py-6 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
         >
-          Explore Luxury Spaces
+          Explore Spaces
         </Link>
       </div>
     </main>

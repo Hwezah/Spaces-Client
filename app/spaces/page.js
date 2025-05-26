@@ -18,7 +18,7 @@ export default function Page({ searchParams }) {
   return (
     <div>
       <h1 className="text-4xl mb-5 text-accent-400 font-medium">
-        Our Luxury Spaces
+        Explore Spaces
       </h1>
       <p className="text-primary-200 text-lg mb-10">
         Escape to comfort and calm in our private, family-friendly spaces in

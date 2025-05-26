@@ -5,18 +5,18 @@ function spaceCard({ space }) {
   const { id, name, maxCapacity, regularPrice, discount, image } = space;
 
   return (
-    <div className="flex border-primary-800 border ">
-      <div className="relative aspect-square flex-1">
+    <div className="flex bg-primary-900 ">
+      <div className="relative aspect-square flex-1  ">
         <Image
           src={image}
           fill
           alt={`space ${name}`}
-          className="flex-1 border-r border-primary-800  object-cover"
+          className="flex-1  object-cover"
         />
       </div>
 
-      <div className="flex-grow">
-        <div className="pt-5 pb-4 px-7 bg-primary-950">
+      <div className="flex-grow ">
+        <div className="pt-5 pb-4 px-7">
           <h3 className="text-accent-500 font-semibold text-2xl mb-3">
             Space {name}
           </h3>
@@ -45,10 +45,10 @@ function spaceCard({ space }) {
           </p>
         </div>
 
-        <div className="bg-primary-950 border-t border-t-primary-800 text-right">
+        <div className="bg-primary-800 text-right">
           <Link
             href={`/spaces/${id}`}
-            className="border-l border-primary-800 py-4 px-6 inline-block hover:bg-accent-600 transition-all hover:text-primary-900"
+            className=" py-4 px-6 inline-block hover:bg-accent-600 bg-primary-700 transition-all hover:text-primary-900"
           >
             Details & reservation &rarr;
           </Link>

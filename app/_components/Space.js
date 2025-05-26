@@ -4,13 +4,13 @@ import SpaceDescriptionText from "@/app/_components/SpaceDescriptionText";
 export default function Space({ space }) {
   const { name, description, maxCapacity, image } = space;
   return (
-    <div className="grid lg:grid-cols-[3fr_4fr] gap-20 border border-primary-800 py-3 px-10 mb-24 items-center justify-center">
+    <div className="grid lg:grid-cols-[3fr_4fr] gap-20 bg-primary-900 py-3 px-10 mb-24 items-center justify-center">
       <div className="relative scale-[1.15] lg:-translate-x-3 aspect-square flex-1">
         <Image src={image} alt={`space ${name}`} fill object-cover />
       </div>
 
       <div>
-        <h3 className="text-accent-100 font-black text-7xl mb-5 lg:translate-x-[-254px] bg-primary-950 p-6 pb-1 w-[150%]">
+        <h3 className="text-accent-100 font-black text-7xl mb-5 lg:translate-x-[-254px] bg-primary-800 p-6 pb-1 w-[150%]">
           Space {name}
         </h3>
 

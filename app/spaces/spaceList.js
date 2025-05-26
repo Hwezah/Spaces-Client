@@ -5,25 +5,25 @@ export default async function SpaceList({ filter }) {
   no_store(); // Disable caching for this component
   const Spaces = await getSpaces();
   if (!Spaces.length) return null;
-  let displayedCabins = Spaces;
+  let displayedSpaces = Spaces;
   if (filter === "all") {
-    displayedCabins = Spaces;
+    displayedSpaces = Spaces;
   }
   if (filter === "small") {
-    displayedCabins = Spaces.filter((space) => Number(space.maxCapacity) <= 3);
+    displayedSpaces = Spaces.filter((space) => Number(space.maxCapacity) <= 3);
   }
   if (filter === "medium") {
-    displayedCabins = Spaces.filter(
+    displayedSpaces = Spaces.filter(
       (space) =>
         Number(space.maxCapacity) >= 4 && Number(space.maxCapacity) <= 7
     );
   }
   if (filter === "large") {
-    displayedCabins = Spaces.filter((space) => Number(space.maxCapacity) >= 8);
+    displayedSpaces = Spaces.filter((space) => Number(space.maxCapacity) >= 8);
   }
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 xl:gap-14">
-      {displayedCabins.map((space) => (
+      {displayedSpaces.map((space) => (
         <SpaceCard space={space} key={space.id} />
       ))}
     </div>

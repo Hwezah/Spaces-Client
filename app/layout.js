@@ -9,8 +9,8 @@ const josefin = Josefin_Sans({
 import "@/app/_styles/globals.css";
 export const metadata = {
   title: {
-    default: "Welcome / Baluti spaces",
-    template: "%s / Baluti spaces",
+    default: "Welcome / Spaces",
+    template: "%s / Spaces",
   },
   description:
     "Luxurious space hotel, located in the heart of the Italian Dolomites, surrounded by beautiful mountains and dark forests",
