@@ -1,7 +1,7 @@
 "use client";
 import { useOptimistic } from "react";
 import ReservationCard from "@/app/_components/ReservationCard";
-import { deleteReservationAction } from "@/app/_lib/actions";
+import { deleteBookingAction } from "@/app/_lib/actions";
 export default function ReservationList({ bookings }) {
   const [optimisticBookings, optimisticDelete] = useOptimistic(
     bookings,
@@ -12,7 +12,7 @@ export default function ReservationList({ bookings }) {
   async function handleDelete(bookingId) {
     optimisticDelete(bookingId);
     try {
-      await deleteReservationAction(bookingId);
+      await deleteBookingAction(bookingId);
     } catch (err) {
       console.error("Failed to delete reservation", err);
       // Optionally refetch bookings or show a toast

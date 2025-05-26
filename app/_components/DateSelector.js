@@ -1,9 +1,10 @@
 "use client";
-import { isWithinInterval, set } from "date-fns";
+import { differenceInDays, isSameDay, isWithinInterval, set } from "date-fns";
 import { useReservation } from "./ReservationContext";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
-
+import { isPast } from "date-fns";
+import { is } from "date-fns/locale";
 function isAlreadyBooked(range, datesArr) {
   return (
     range.from &&
@@ -16,11 +17,11 @@ function isAlreadyBooked(range, datesArr) {
 
 function DateSelector({ settings, space, bookedDates }) {
   const { range, setRange, resetRange } = useReservation();
-  // CHANGE
-  const regularPrice = 23;
-  const discount = 23;
-  const numNights = 23;
-  const cabinPrice = 23;
+  const displayRange = isAlreadyBooked(range, bookedDates) ? {} : range;
+
+  const { regularPrice, discount } = space;
+  const numNights = differenceInDays(displayRange.from, displayRange.to);
+  const spacePrice = (regularPrice - discount) * numNights;
   // const range = { from: null, to: null };
 
   // SETTINGS
@@ -36,12 +37,16 @@ function DateSelector({ settings, space, bookedDates }) {
         onSelect={(range) => {
           setRange(range);
         }}
-        selected={range}
+        selected={displayRange}
         fromMonth={new Date()}
         fromDate={new Date()}
         toYear={new Date().getFullYear() + 5}
         captionLayout="dropdown"
         numberOfMonths={2}
+        disabled={(curDate) =>
+          isPast(curDate) ||
+          bookedDates.some((date) => isSameDay(date, curDate))
+        }
         classNames={{
           months: "flex flex-row gap-2", // ✅ This lays out months side-by-side
           day: "hover:bg-accent-600 hover:text-primary-800 rounded-full ",
@@ -76,7 +81,7 @@ function DateSelector({ settings, space, bookedDates }) {
               </p>
               <p>
                 <span className="text-lg font-bold uppercase">Total</span>{" "}
-                <span className="text-2xl font-semibold">${cabinPrice}</span>
+                <span className="text-2xl font-semibold">${spacePrice}</span>
               </p>
             </>
           ) : null}

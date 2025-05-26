@@ -8,7 +8,7 @@ function LoginMessage() {
           login
         </Link>{" "}
         to reserve this
-        <br /> cabin right now
+        <br /> space right now
       </p>
     </div>
   );
