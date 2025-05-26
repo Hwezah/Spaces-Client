@@ -1,4 +1,8 @@
 {
+  "/page": "app/page.js",
+  "/spaces/page": "app/spaces/page.js",
   "/spaces/[spaceId]/page": "app/spaces/[spaceId]/page.js",
-  "/spaces/page": "app/spaces/page.js"
+  "/account/page": "app/account/page.js",
+  "/account/profile/page": "app/account/profile/page.js",
+  "/account/reservations/page": "app/account/reservations/page.js"
 }
