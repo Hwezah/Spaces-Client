@@ -1,14 +1,13 @@
 "use client";
 import { TrashIcon } from "@heroicons/react/24/solid";
-import { deleteReservationAction } from "../_lib/actions";
 import { useTransition } from "react";
-import Spinner from "./Spinner";
-function DeleteReservation({ bookingId }) {
+import SpinnerMini from "./SpinnerMini";
+function DeleteReservation({ bookingId, onDelete }) {
   const [isPending, startTransition] = useTransition();
   function handleDelete() {
     if (confirm("Are you sure you want to delete this reservation?"))
       startTransition(() => {
-        deleteReservationAction(bookingId);
+        onDelete(bookingId);
       });
   }
   return (
@@ -22,7 +21,7 @@ function DeleteReservation({ bookingId }) {
           <span className="mt-1">Delete</span>{" "}
         </>
       ) : (
-        <Spinner />
+        <SpinnerMini />
       )}
     </button>
   );
