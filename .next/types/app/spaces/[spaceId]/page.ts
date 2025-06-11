@@ -1,4 +1,4 @@
-// File: C:\Users\DELL\Desktop\Baluti Spaces(Client)\app\spaces\[spaceId]\page.js
+// File: C:\Users\DELL\Desktop\Spaces(Client)\app\spaces\[spaceId]\page.js
 import * as entry from '../../../../../app/spaces/[spaceId]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -1,6 +1,6 @@
 "use client";
 import { useReservation } from "@/app/_components/ReservationContext";
-
+import { differenceInDays } from "date-fns";
 import Image from "next/image";
 import { createBooking } from "../_lib/data-service";
 import SubmitButton from "./SubmitButton";

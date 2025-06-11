@@ -6,7 +6,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "gaojwilavmullvnglpwp.supabase.co",
         port: "",
-        pathname: "/storage/v1/object/public/cabin-images/**",
+        pathname: "/storage/v1/object/public/space-images/**",
       },
       {
         protocol: "https",
