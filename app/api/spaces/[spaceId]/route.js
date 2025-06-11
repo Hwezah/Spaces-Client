@@ -1,12 +1,12 @@
-import { getBookedDatesByCabinId, getCabin } from "@/app/_lib/data-service";
+import { getBookedDatesByspaceId, getspace } from "@/app/_lib/data-service";
 
 export async function GET(request, { params }) {
   const { spaceId } = params;
 
   try {
     const [space, bookedDates] = await Promise.all([
-      getCabin(spaceId),
-      getBookedDatesByCabinId(cabinId),
+      getspace(spaceId),
+      getBookedDatesByspaceId(spaceId),
     ]);
 
     return Response.json({ space, bookedDates });
