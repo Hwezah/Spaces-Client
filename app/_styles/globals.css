@@ -37,3 +37,16 @@
   --rdp-background-color: theme("colors.accent.600") !important;
   margin: 0 !important;
 }
+:root {
+  --background: 0 0% 100%;
+  /* --background: 0 0% 96%; */
+  --foreground: 222.2 84% 4.9%;
+
+  /* ... other theme variables ... */
+}
+
+.dark {
+  /* --background: 222.2 84% 4.9%;  */
+  --background: hsl(210, 95%, 10%);
+  --foreground: 210 40% 98%;
+}

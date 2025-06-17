@@ -11,20 +11,12 @@ export const revalidate = 0; // Clear Caching to get the latest data
 export const metadata = {
   title: "About",
 };
-// export default function Page() {
-//   return (
-//     <div>
-//       <h1>About</h1>
-//     </div>
-//   );
-// }
-// export const revalidate = 0; // Clear Caching to get the latest data
 
 export default async function Page() {
   const Spaces = await getSpaces();
 
   return (
-    <div className="grid lg:grid-cols-5 lg:gap-x-24 gap-x-14 lg:gap-y-32 gap-y-22 text-lg items-center">
+    <div className="grid lg:grid-cols-5 lg:gap-x-24 gap-x-14 lg:gap-y-32 gap-y-22 text-lg items-center max-w-[90rem] md:px-8">
       <div className="lg:col-span-3">
         <h1 className="text-4xl mb-6 text-accent-400 font-medium">
           Welcome to The Baluti Spaces,
@@ -73,7 +65,7 @@ export default async function Page() {
           Meet the Team behind the Spaces,
         </h1>
 
-        <div className="">
+        <div className="flex flex-col">
           <p>
             A Family-Run Retreat Baluti spaces is a thoughtfully run,
             family-driven retreat designed to offer calm, comfort, and a sense
@@ -87,7 +79,7 @@ export default async function Page() {
             than just a guest.
           </p>
 
-          <div>
+          <div className="self-center sm:self-start">
             <Link
               href="/spaces"
               className="inline-block mt-4 bg-accent-500 px-8 py-5 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"

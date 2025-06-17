@@ -1,6 +1,8 @@
 import { ReservationProvider } from "@/app/_components/ReservationContext";
 import Header from "./_components/Header";
 import { Josefin_Sans } from "next/font/google";
+import Footer from "./_components/Footer";
+import ScrollToTopButton from "@/app/_components/ScrollToTopButton";
 const josefin = Josefin_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -22,11 +24,13 @@ export default function RootLayout({ children }) {
         className={`${josefin.className} min-h-screen bg-primary-950 text-primary-100 flex flex-col antialiased `}
       >
         <Header />
-        <div className="flex-1 px-8 py-12 grid">
-          <main className="max-w-7xl mx-auto w-full">
+        <div className="px-4 py-12 mx-auto grid">
+          <main className="max-w-[120rem] w-full">
             <ReservationProvider>{children}</ReservationProvider>
           </main>
+          <ScrollToTopButton />
         </div>
+        <Footer />
       </body>
     </html>
   );

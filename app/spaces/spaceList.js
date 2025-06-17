@@ -1,6 +1,6 @@
-import SpaceCard from "@/app/_components/SpaceCard";
 import { unstable_noStore as no_store } from "next/cache";
 import { getSpaces } from "@/app/_lib/data-service";
+import AnimatedSpaceCard from "../_components/AnimatedSpaceCard";
 export default async function SpaceList({ filter }) {
   no_store(); // Disable caching for this component
   const Spaces = await getSpaces();
@@ -22,9 +22,9 @@ export default async function SpaceList({ filter }) {
     displayedSpaces = Spaces.filter((space) => Number(space.maxCapacity) >= 8);
   }
   return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 xl:gap-14">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-[2vw]">
       {displayedSpaces.map((space) => (
-        <SpaceCard space={space} key={space.id} />
+        <AnimatedSpaceCard space={space} key={space.id} />
       ))}
     </div>
   );

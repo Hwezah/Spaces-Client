@@ -5,6 +5,7 @@ import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import { isPast } from "date-fns";
 import { is } from "date-fns/locale";
+import React from "react";
 function isAlreadyBooked(range, datesArr) {
   return (
     range.from &&
@@ -26,9 +27,28 @@ function DateSelector({ settings, space, bookedDates }) {
 
   // SETTINGS
   const { maxBookingLength, minBookingLength } = settings;
+  const [numberOfMonths, setNumberOfMonths] = React.useState(2); // Default to 2 months
+
+  React.useEffect(() => {
+    const updateMonths = () => {
+      // Tailwind's 'md' breakpoint is typically 768px
+      // You can adjust this breakpoint as needed
+      if (window.innerWidth < 768) {
+        setNumberOfMonths(1);
+      } else {
+        setNumberOfMonths(2);
+      }
+    };
+
+    // Set initial value on component mount
+    updateMonths();
+
+    window.addEventListener("resize", updateMonths);
+    return () => window.removeEventListener("resize", updateMonths);
+  }, []); // Empty dependency array ensures this runs only on mount and unmount
 
   return (
-    <div className="flex flex-col justify-between w-half  border border-primary-800 min-h-[400px]">
+    <div className="flex flex-col justify-between border border-primary-800 min-h-[400px] px-2">
       <DayPicker
         className="pt-12 place-self-center "
         mode="range"
@@ -42,13 +62,13 @@ function DateSelector({ settings, space, bookedDates }) {
         fromDate={new Date()}
         toYear={new Date().getFullYear() + 5}
         captionLayout="dropdown"
-        numberOfMonths={2}
+        numberOfMonths={numberOfMonths}
         disabled={(curDate) =>
           isPast(curDate) ||
           bookedDates.some((date) => isSameDay(date, curDate))
         }
         classNames={{
-          months: "flex flex-row gap-2", // ✅ This lays out months side-by-side
+          months: "flex flex-row gap-2 justify-between px-2 ", // ✅ This lays out months side-by-side
           day: "hover:bg-accent-600 hover:text-primary-800 rounded-full ",
         }}
         modifiersClassNames={{
@@ -59,9 +79,9 @@ function DateSelector({ settings, space, bookedDates }) {
         }}
       />
 
-      <div className="flex items-center justify-between px-8 bg-accent-500 text-primary-800 h-[72px]">
-        <div className="flex items-baseline gap-6">
-          <p className="flex gap-2 items-baseline">
+      <div className="flex items-center  justify-center  bg-accent-500 text-primary-800 h-[72px]">
+        <div className="flex gap-6">
+          <p className="flex gap-2 ">
             {discount > 0 ? (
               <>
                 <span className="text-2xl">${regularPrice - discount}</span>
