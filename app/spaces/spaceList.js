@@ -22,7 +22,7 @@ export default async function SpaceList({ filter }) {
     displayedSpaces = Spaces.filter((space) => Number(space.maxCapacity) >= 8);
   }
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-[2vw]">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2">
       {displayedSpaces.map((space) => (
         <AnimatedSpaceCard space={space} key={space.id} />
       ))}

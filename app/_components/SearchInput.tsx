@@ -7,7 +7,7 @@ export const SearchInput = ({
 }) => {
   return (
     <div className={`relative ${className} w-full`}>
-      <div className="absolute right-2 top-1/2 -translate-y-1/2 bg-red-700 dark:bg-primary-900 lg:p-4 md:p-3 p-2 rounded-full">
+      <div className="absolute right-2 top-1/2 -translate-y-1/2 bg-amber-500 dark:bg-primary-900 lg:p-4 md:p-3 p-2 rounded-full">
         <Search className="h-6 w-6 text-white" />
       </div>
 

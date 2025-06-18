@@ -63,7 +63,7 @@ export function MainNav({ session }: MainNavProps) {
     return () => window.removeEventListener("resize", handleResize);
   }, [isSheetOpen]);
   return (
-    <nav className="relative flex items-center mx-auto justify-between p-4 pt-6 pb-4 text-foreground z-50">
+    <nav className="relative flex items-center mx-auto justify-between pt-4 pb-4 text-foreground z-50">
       {/* Logo or Brand Name - Logo component is already a Link */}
       <Logo />
 
@@ -80,7 +80,7 @@ export function MainNav({ session }: MainNavProps) {
                         <NavigationMenuLink
                           className={cn(
                             navigationMenuTriggerStyle(), // Base styles
-                            "md:text-base md:px-5 md:py-3 ", // Larger text and padding on md screens and up
+                            "md:text-base md:py-3 ", // Larger text and padding on md screens and up
                             "flex items-center gap-2 "
                           )}
                         >
@@ -101,7 +101,7 @@ export function MainNav({ session }: MainNavProps) {
                       <Link href="/account" legacyBehavior passHref>
                         <NavigationMenuLink
                           className={cn(
-                            "md:text-base md:px-5 md:pt-3 pb-2 hover:border-b-2 border-gray-700 dark:border-white transition-all duration-200" // Larger text and padding on md screens and up
+                            "md:text-base md:pt-3 pb-2 hover:border-b-2 border-gray-700 dark:border-white transition-all duration-200" // Larger text and padding on md screens and up
                           )}
                         >
                           Guest area
@@ -116,7 +116,7 @@ export function MainNav({ session }: MainNavProps) {
                   <Link href={link.href} legacyBehavior passHref>
                     <NavigationMenuLink
                       className={cn(
-                        "md:text-base md:px-5 md:pt-3 pb-2 hover:border-b-2 border-gray-700 transition-all dark:border-white duration-200" // Larger text and padding on md screens and up
+                        "md:text-base md:pl-5 md:pt-3 pb-2 hover:border-b-2 border-gray-700 transition-all dark:border-white duration-200" // Larger text and padding on md screens and up
                       )}
                     >
                       {link.label}
@@ -134,7 +134,7 @@ export function MainNav({ session }: MainNavProps) {
       <div className="md:hidden">
         <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild onClick={() => setIsSheetOpen(true)}>
-            <Button size="icon" className="w-12 h-12">
+            <Button size="icon">
               <AlignJustify className="!w-6 !h-6" />
             </Button>
           </SheetTrigger>
