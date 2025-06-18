@@ -48,7 +48,7 @@ function DateSelector({ settings, space, bookedDates }) {
   }, []); // Empty dependency array ensures this runs only on mount and unmount
 
   return (
-    <div className="flex flex-col justify-between border border-primary-800 min-h-[400px] px-2">
+    <div className="flex flex-col justify-between border border-primary-800 min-h-[400px]">
       <DayPicker
         className="pt-12 place-self-center "
         mode="range"
@@ -79,7 +79,7 @@ function DateSelector({ settings, space, bookedDates }) {
         }}
       />
 
-      <div className="flex items-center  justify-center  bg-accent-500 -800 h-[72px]">
+      <div className="flex items-center justify-center bg-accent-500 py-2">
         <div className="flex gap-6">
           <p className="flex gap-2 ">
             {discount > 0 ? (

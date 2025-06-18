@@ -10,7 +10,7 @@ export default async function Reservation({ space }) {
   ]);
   const session = await auth();
   return (
-    <div className="grid xl:grid-cols-[2fr_1fr] lg:flex-row  border border-primary-800 min-h-[400px]">
+    <div className="grid xl:grid-cols-[2fr_1fr] lg:flex-row border border-primary-800 min-h-[400px]">
       <DateSelector
         settings={settings}
         bookedDates={bookedDates}

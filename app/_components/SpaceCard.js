@@ -14,7 +14,7 @@ export default function SpaceCard({ space, layout = "default" }) {
       className={cn(
         "group relative rounded-lg overflow-hidden flex hover:scale-105 transition-transform duration-200",
         isRowLayout
-          ? " flex-col md:flex-row items-stretch gap-6 h-fit "
+          ? " flex-col md:flex-row items-stretch lg:gap-6 gap-2 h-fit "
           : "flex-col"
 
         // Default to flex-col, use flex (row) and items-stretch for 'row' layout
