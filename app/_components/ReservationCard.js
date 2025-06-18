@@ -23,7 +23,7 @@ function ReservationCard({ booking, onDelete }) {
   } = booking;
 
   return (
-    <div className="flex  ">
+    <div className="flex flex-col lg:flex-row">
       <div className="relative h-32 aspect-square">
         <Image
           src={image}
@@ -33,13 +33,16 @@ function ReservationCard({ booking, onDelete }) {
         />
       </div>
 
-      <div className="flex-grow px-6 py-3 flex flex-col">
+      <div className="flex-grow lg:px-6 flex flex-col">
         <div className="flex items-center justify-between">
-          <h3 className="text-xl font-semibold">
+          <h3 className="lg:text-xl font-semibold">
             {numNights} nights in space {name}
+            <span className="lg:text-xl font-semibold dark:text-accent-400 ml-4 leading-none">
+              ${totalPrice}
+            </span>
           </h3>
           {isPast(new Date(startDate)) ? (
-            <span className="bg-yellow-800 text-yellow-200 h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
+            <span className="bg-yellow-800 text-yellow-200 p-1 uppercase text-xs font-bold text-center mb-2 rounded-sm">
               past
             </span>
           ) : (
@@ -49,7 +52,7 @@ function ReservationCard({ booking, onDelete }) {
           )}
         </div>
 
-        <p className="text-lg -300">
+        <p className="lg:text-lg leading-none">
           {format(new Date(startDate), "EEE, MMM dd yyyy")} (
           {isToday(new Date(startDate))
             ? "Today"
@@ -57,21 +60,17 @@ function ReservationCard({ booking, onDelete }) {
           ) &mdash; {format(new Date(endDate), "EEE, MMM dd yyyy")}
         </p>
 
-        <div className="flex gap-5 mt-auto items-baseline">
-          <p className="text-xl font-semibold dark:text-accent-400">
-            ${totalPrice}
-          </p>
-          <p className="-300">&bull;</p>
-          <p className="text-lg -300">
+        <div className="flex items-baseline">
+          {/* <p className="lg:text-lg">
             {numGuests} guest{numGuests > 1 && "s"}
-          </p>
-          <p className="ml-auto text-sm -400">
+          </p> */}
+          <span className="text-sm">
             Booked {format(new Date(created_at), "EEE, MMM dd yyyy, p")}
-          </p>
+          </span>
         </div>
       </div>
 
-      <div className="flex flex-col border-l border-primary-800 w-[100px]">
+      <div className="flex flex-col border-l border-primary-800">
         {!isPast(startDate) ? (
           <>
             <Link
