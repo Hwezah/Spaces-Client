@@ -178,7 +178,9 @@ export function MainNav({ session }: MainNavProps) {
                         className="object-cover"
                       />
                     </div>
-                    <span>{session.user.name ?? "Account"}</span>
+                    <span>
+                      {session.user?.name?.split(" ")[0] ?? "Account"}
+                    </span>
                   </Link>
                 ) : (
                   <Link
