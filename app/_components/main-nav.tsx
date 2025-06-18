@@ -140,7 +140,7 @@ export function MainNav({ session }: MainNavProps) {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className=" border-l-0 w-[16rem]  bg-white dark:bg-background"
+            className=" border-l-0 w-[12rem]  bg-white dark:bg-background"
           >
             {/* Or "left", "top", "bottom" */}
             <SheetHeader>
