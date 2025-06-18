@@ -69,23 +69,23 @@ function DateSelector({ settings, space, bookedDates }) {
         }
         classNames={{
           months: "flex flex-row gap-2 justify-between px-2 ", // ✅ This lays out months side-by-side
-          day: "hover:bg-accent-600 hover:text-primary-800 rounded-full ",
+          day: "hover:bg-accent-600 hover:-800 rounded-full ",
         }}
         modifiersClassNames={{
-          selected: "bg-white text-primary-800", // Selected days
-          range_start: "bg-white text-primary-800", // Start of range
-          range_end: "bg-white text-primary-800", // End of range
+          selected: "bg-white -800", // Selected days
+          range_start: "bg-white -800", // Start of range
+          range_end: "bg-white -800", // End of range
           today: "border border-accent-400 rounded-full", // Optional: highlight today
         }}
       />
 
-      <div className="flex items-center  justify-center  bg-accent-500 text-primary-800 h-[72px]">
+      <div className="flex items-center  justify-center  bg-accent-500 -800 h-[72px]">
         <div className="flex gap-6">
           <p className="flex gap-2 ">
             {discount > 0 ? (
               <>
                 <span className="text-2xl">${regularPrice - discount}</span>
-                <span className="line-through font-semibold text-primary-700">
+                <span className="line-through font-semibold -700">
                   ${regularPrice}
                 </span>
               </>

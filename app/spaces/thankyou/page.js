@@ -8,7 +8,7 @@ export default function Page() {
       </h1>
       <Link
         href="/account/reservations"
-        className="underline text-xl text-accent-500 inline-block"
+        className="underline text-xl dark:text-accent-500 inline-block"
       >
         Manage your reservations &rarr;
       </Link>

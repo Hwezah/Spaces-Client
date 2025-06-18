@@ -45,7 +45,7 @@ export default function SpaceCard({ space, layout = "default" }) {
         <div className="flex justify-between  items-center leading-none">
           <h3
             className={cn(
-              "font-semibold text-accent-100 py-1",
+              "font-semibold dark:text-accent-100 py-1",
               isRowLayout ? "truncate" : ""
             )}
           >
@@ -57,7 +57,7 @@ export default function SpaceCard({ space, layout = "default" }) {
         </div>
         <p
           className={cn(
-            "text-primary-200 text-sm flex-grow  md:text-md lg:text-lg",
+            "-200 text-sm flex-grow  md:text-md lg:text-lg",
             isRowLayout ? "" : "leading-none"
           )}
         >

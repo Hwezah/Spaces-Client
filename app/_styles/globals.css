@@ -37,16 +37,18 @@
   --rdp-background-color: theme("colors.accent.600") !important;
   margin: 0 !important;
 }
-:root {
-  --background: 0 0% 100%;
-  /* --background: 0 0% 96%; */
-  --foreground: 222.2 84% 4.9%;
+/* globals.css */
 
-  /* ... other theme variables ... */
+:root {
+  --background: #fff; /* light background */
+  --foreground: #1b2631; /* light text */
+  --primary: #e1e8ef;
+  --accent: #c69963;
 }
 
 .dark {
-  /* --background: 222.2 84% 4.9%;  */
-  --background: hsl(210, 95%, 10%);
-  --foreground: 210 40% 98%;
+  --background: #141c24; /* dark background */
+  --foreground: #e1e8ef; /* dark text */
+  --primary: #1b2631;
+  --accent: #c69963;
 }

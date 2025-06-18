@@ -35,7 +35,7 @@ export default function ScrollToTopButton() {
     <Button
       size="icon"
       className={cn(
-        "fixed bottom-8 border-none right-8 z-50 text-primary-950 rounded-full bg-amber-500 p-2  duration-200 hover:scale-110 transition-all ",
+        "fixed bottom-8 border-none dark:text-primary-950 right-8 z-50 rounded-full bg-accent-500 p-2 lg:p-4  duration-200 hover:scale-110 transition-all ",
         isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       )}
       onClick={scrollToTop}

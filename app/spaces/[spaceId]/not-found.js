@@ -7,7 +7,7 @@ function NotFound() {
       </h1>
       <Link
         href="/spaces"
-        className="inline-block bg-accent-500 text-primary-800 px-6 py-3 text-lg"
+        className="inline-block bg-accent-500 -800 px-6 py-3 text-lg"
       >
         Return to Spaces...
       </Link>

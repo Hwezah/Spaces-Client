@@ -18,8 +18,8 @@ export default async function Page() {
   return (
     <div className="grid lg:grid-cols-5 lg:gap-x-24 gap-x-14 lg:gap-y-32 gap-y-22 text-lg items-center max-w-[90rem] md:px-8">
       <div className="lg:col-span-3">
-        <h1 className="text-4xl mb-6 text-accent-400 font-medium">
-          Welcome to The Baluti Spaces,
+        <h1 className="text-4xl mb-6 text-accent-600 font-medium">
+          Welcome to Spaces,
         </h1>
 
         <div className="space-y-8">
@@ -61,7 +61,7 @@ export default async function Page() {
       </div>
 
       <div className="lg:col-span-3">
-        <h1 className="text-4xl mb-6 text-accent-400 font-medium mt-4">
+        <h1 className="text-4xl mb-6 text-accent-600 font-medium mt-4">
           Meet the Team behind the Spaces,
         </h1>
 
@@ -82,7 +82,7 @@ export default async function Page() {
           <div className="self-center sm:self-start">
             <Link
               href="/spaces"
-              className="inline-block mt-4 bg-accent-500 px-8 py-5 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
+              className="inline-block mt-4 bg-accent-500 px-8 dark:text-primary-950 py-5 -800 text-lg font-semibold hover:bg-accent-600 transition-all"
             >
               Explore our Luxury Spaces
             </Link>

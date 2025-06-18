@@ -17,10 +17,10 @@ export default function Page({ searchParams }) {
   // CHANGE
   return (
     <div>
-      <h1 className="text-4xl mb-5 text-accent-400 font-medium">
+      <h1 className="text-4xl mb-5 dark:text-accent-400 font-medium">
         Explore Spaces
       </h1>
-      <p className="text-primary-200 text-lg mb-10">
+      <p className="-200 text-lg mb-10">
         Escape to comfort and calm in our private, family-friendly spaces in
         Komamboga, Magere... Designed for quiet living and restful stays, each
         space offers the perfect blend of privacy, warmth, and convenience.
